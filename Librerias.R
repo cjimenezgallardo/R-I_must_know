@@ -1,5 +1,6 @@
 #LIBRERIAS
-
+library(readxl) # lectura archivos XLSX
+library(writexl)# escritura a XLSX
 
 # siempre cargar 
 library(tidyverse)#anexo manejo de datos 
@@ -11,8 +12,6 @@ library(lubridate) #manejor de datos
 library(haven) #importa datos desde SPSS, SAS; STATA
 
 
-
-
 #tablas
 library(report) # genera informe de resultados estadisticos
 library(expss) # tablas etiquetas y otras funciones
@@ -22,16 +21,33 @@ library(flextable)
 library(broom)
 library(xtable)
 library(tableone)
+library(apaTables)
 
-
-
-
-
+# GRAFICA
+library(xts)
+library(dygraphs)
+library(gganimate)
+library(plotly)
+library(esquisse) # para grafica dinamica
+library(GGally) #grafica
+library(ggthemes) #grafica
+library(ggThemeAssist) #grafica
+library(gdtools) #grafica
+library(ggplot2) #mejoras de graficos
+library(hrbrthemes)
+library(viridis) #grafica
+library(lattice) # graficas avanzada
+library(gdtools) #para grafica
+library(highcharter) # mejorar grafica
+library(treemap)
+library(corrplot)
+library(ggmap)
+library(plot3D) 
+library(plot3Drgl)
 
 
 #EXPLORACION DE DATOS 
 library(DescTools) #estadistica en general
-library(devtools) #para desarrollo de paquetes
 library(doBy) #Estadisticas agrupadas
 library(EnvStats) # informacion estadistica mas completa
 library(evir) # valores extremos
@@ -41,10 +57,7 @@ library(tables)
 library(knitr) # Tablas amigables
 library(MASS) # analisis estadisstico mas avanzado
 library(mosaic) #estadisticas en general
-
-
-
-
+library(outliers) #para identificacion y trabajo con outliers
 
 
 # PROBABILIDAD Y DATOS
@@ -54,8 +67,6 @@ library(fitdistrplus) # funciones de probabilidad
 library(gamlss)
 library(nortest) #pruebas de normalidad
 library(VGAM) # Distribuciones de probabilidad
-
-
 
 
 # REGRESION
@@ -72,17 +83,8 @@ library(jtools)
 library(olsrr)
 
 
-library(plot3D) 
-library(plot3Drgl)
-library(apaTables)
-library(gvlma)
-library(performance)
-
-
-
-
-
 # INFERENCIA
+library(rsample) #muestreo y bootstrapping
 library(agricolae)
 library(pwr) # analisis de potencia de pruebas estadisticas
 library(onewaytests) # para pruebas POST HOC
@@ -98,34 +100,13 @@ library(rstatix) #pruebas estadisticas
 library(FSA) # comparaciones multiples 
 
 
-
-
-
-
-# GRAFICA
-library(xts)
-library(dygraphs)
-library(gganimate)
-library(plotly)
-
-library(esquisse) # para grafica dinamica
-library(GGally) #grafica
-library(ggthemes) #grafica
-library(ggThemeAssist) #grafica
-library(gdtools) #grafica
-library(ggplot2) #mejoras de graficos
-library(hrbrthemes)
-library(viridis) #grafica
-library(lattice) # graficas avanzada
-library(gdtools) #para grafica
-library(highcharter) # mejorar grafica
-
-
 #para escribir en formatos "REVISTAS"
 library(apa)
 
 
-
+# genericos
+library(devtools) #para desarrollo de paquetes
+library(roxygen2) #documentacion
 
 
 #pendientes por ordenar
@@ -135,49 +116,14 @@ library(fdth)  # Crear tablas de distribuci?n
 library(multcomp) # visualizacion de comparaciones multiples
 library(multcompView) # visualizacion de comparaciones multiples
 library(naniar) 
-
-
-library(outliers) #para identificacion y trabajo con outliers
-
-
-library(roxygen2) #documentacion 
-library(rsample) #muestreo y bootstrapping
-
-
-
-
-
-library(writexl)# escritura a XLSX
-
-
 library(samplingbook)
 library(pastecs)
 library(summarytools)
 library(DataExplorer)
 library(Rmisc)
+library(gvlma)
+library(performance)
 
-# grafica
-
-
-
-# para cargar múltiple librerias
-
-carga_lib <- function(librerias){
-  a_cargar <- librerias[!(librerias %in% installed.packages()[, "Package"])]
-  if (length(a_cargar)) 
-    install.packages(a_cargar, 
-                     dependencies = TRUE)
-  sapply(librerias, 
-         character.only = TRUE, 
-         require)
-}
-
-#define las librerias que necesitas
-librerias <- c("tidyverse",
-               "PerformanceAnalytics")
-
-#carga las librerias 
-carga_lib(librerias)
 
 
 
