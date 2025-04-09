@@ -11,7 +11,6 @@ library(broom) #convierte resultados en formatos mejor vistos
 library(lubridate) #manejor de datos
 library(haven) #importa datos desde SPSS, SAS; STATA
 
-
 #tablas
 library(report) # genera informe de resultados estadisticos
 library(expss) # tablas etiquetas y otras funciones
@@ -45,6 +44,11 @@ library(ggmap)
 library(plot3D) 
 library(plot3Drgl)
 
+#grafica WordCloud
+library(tm) #prepara textos
+library(wordcloud) #grafica el wordlcoud
+
+
 
 #EXPLORACION DE DATOS 
 library(DescTools) #estadistica en general
@@ -66,7 +70,10 @@ library(e1071) # funciones de probabilidad
 library(fitdistrplus) # funciones de probabilidad
 library(gamlss)
 library(nortest) #pruebas de normalidad
+library(moments)#pruebas de normalidad
+library(MVN)#pruebas de normalidad
 library(VGAM) # Distribuciones de probabilidad
+library(BiasedUrn) # Distribuciones discretas 
 
 
 # REGRESION
@@ -98,6 +105,10 @@ library(effectsize)
 library(nortest) #pruebas de normalidad
 library(rstatix) #pruebas estadisticas
 library(FSA) # comparaciones multiples 
+
+
+
+
 
 
 #para escribir en formatos "REVISTAS"
