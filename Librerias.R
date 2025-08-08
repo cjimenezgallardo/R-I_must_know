@@ -51,6 +51,7 @@ library(wordcloud) #grafica el wordlcoud
 
 
 #EXPLORACION DE DATOS 
+library(Analitica) #estadistica en general y procedimientos de Comparaciones multiples.
 library(DescTools) #estadistica en general
 library(doBy) #Estadisticas agrupadas
 library(EnvStats) # informacion estadistica mas completa
