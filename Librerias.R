@@ -12,6 +12,7 @@ library(lubridate) #manejor de datos
 library(haven) #importa datos desde SPSS, SAS; STATA
 
 #tablas
+library(gt) # facil trabajo y presentacion de resultados en tablas.
 library(report) # genera informe de resultados estadisticos
 library(expss) # tablas etiquetas y otras funciones
 library(kableExtra) # construccion de tablas avanzadas.
