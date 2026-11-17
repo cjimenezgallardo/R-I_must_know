@@ -107,6 +107,7 @@ library(effectsize)
 library(nortest) #pruebas de normalidad
 library(rstatix) #pruebas estadisticas
 library(FSA) # comparaciones multiples 
+library(Art) # Analisis Factorial no parametrico
 
 
 
